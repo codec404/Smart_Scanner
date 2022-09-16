@@ -9,7 +9,7 @@ url = 'http://172.16.25.244:8080/shot.jpg'
 while True:
     image = req.urlopen(url)
     imgBytes = bytearray(image.read())
-    imgNumpy = numpy.array(imgBytes , dtype= numpy.uint8)
+    imgNumpy = numpy.array(imgBytes , dtype = numpy.uint8)
 
     frame = cv2.imdecode(imgNumpy , -1)
     cv2.imshow('Smarto Scanner', frame)
